@@ -39,7 +39,7 @@ var sMap3 map[byte] []byte
 func ReadConfig()  Config{
 	//filePath := "C:\\Users\\qiaok\\OneDrive\\work\\stu\\src\\main\\config.json"
 	//filePath := "/root/work/go/config/config.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/5conf.json"
+	filePath := "/root/work/go/readwrite/gostu/src/main/config/4conf.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
@@ -86,10 +86,6 @@ func insert(li *list.List)  {
 	if e!=nil{
 		fmt.Print(e)
 	}
-	//err := db.Ping()
-	//if err != nil {
-	//	panic(err.Error()) // proper error handling instead of panic in your app
-	//}
 
 	row,err2:=db.Query(sqlstring)
 	defer row.Close()
@@ -176,7 +172,7 @@ func handleWrite(conn net.Conn)  {
 					fmt.Println("write err:", e)
 					return;
 				}
-				time.Sleep(20*time.Second)
+				time.Sleep(23*time.Second)
 			}
 		}
 		time.Sleep(5*time.Second)
@@ -195,6 +191,10 @@ func handleRead(conn net.Conn)  {
 		}
 
 		if bytes.Contains(peekbytes,[]byte{0x03,0x68}){
+			if reader.Buffered()< 109{
+				time.Sleep(3*time.Second)
+				continue
+			}
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
 			//丢弃5个字节
@@ -219,6 +219,10 @@ func handleRead(conn net.Conn)  {
 			continue
 		}
 		if bytes.Contains(peekbytes,[]byte{0x03,16}){
+			if reader.Buffered()<21{
+				time.Sleep(3*time.Second)
+				continue
+			}
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
 			//丢弃5个字节
