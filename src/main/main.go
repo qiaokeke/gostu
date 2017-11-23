@@ -37,9 +37,8 @@ var sMap3 map[byte] []byte
 读取配置文件
  */
 func ReadConfig()  Config{
-	//filePath := "C:\\Users\\qiaok\\OneDrive\\work\\stu\\src\\main\\config.json"
-	//filePath := "/root/work/go/config/config.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/5conf.json"
+	filePath := "C:\\work\\go3\\gostu\\src\\main\\config\\4conf.json"
+	//filePath := "/root/work/go/readwrite/gostu/src/main/config/5conf.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
@@ -207,13 +206,27 @@ func handleRead(conn net.Conn)  {
 			continue
 		}
 		if bytes.Contains(peekbytes,[]byte{0x03,240}){
+
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
 			//丢弃5个字节
 			fmt.Print(dianbiaoNum)
 			reader.Discard(4)
-			recvbytes := make([]byte,240)
-			reader.Read(recvbytes)
+			recvbytes := make([]byte,0,240)
+			tmp := make([]byte,240)
+			total :=0
+			for{
+				n,err := reader.Read(tmp)
+				if err!=nil{
+					break
+				}
+				recvbytes = append(recvbytes,tmp[:n]...)
+				total += n;
+				if total>=240{
+					break
+				}
+			}
+			fmt.Println("totalsize",len(recvbytes))
 			fmt.Printf("% X\n",recvbytes)
 			sMap2[dianbiaoNum] = recvbytes
 			continue
@@ -230,7 +243,6 @@ func handleRead(conn net.Conn)  {
 			sMap3[dianbiaoNum] = recvbytes
 			//处理，将数据送入数据库
 			if HandData(dianbiaoNum){
-
 			}
 			continue
 		}
@@ -275,60 +287,4 @@ func parseBytes(bytes []byte)  *list.List{
 	}
 	return l
 }
-//将读写放到一起进行
-func handleRequest(conn net.Conn)  {
-	defer conn.Close()
-	
-	for{
-		//发送读表命令
-		a := []byte{0x12,0x03,0x00,0x38,0x00,0x34,0xc7,0x73}
-		_,err := conn.Write(a)
-		if err!=nil{
-			fmt.Println("write err:",err)
-			break;
-		}
-		time.Sleep(1*time.Second)
-		//读取数据
-		reader := bufio.NewReader(conn)
-		for{
-			peekbytes,err := reader.Peek(3)
-			fmt.Printf("% X\n",peekbytes)
-			n := reader.Buffered()
-			fmt.Println(n)
-			if err!=nil{
-				fmt.Println("err2222:",err)
-				break
-			}
 
-			if bytes.Contains(peekbytes,[]byte{0x77,0x77}){
-				//丢弃10个字节
-				recvbytes := make([]byte,10)
-				reader.Read(recvbytes)
-				fmt.Printf("% X\n",recvbytes)
-				continue
-			}
-
-			if bytes.Contains(peekbytes,[]byte{0x03,0x68}){
-				//读取 字节
-				dianbiaoNum,_ := reader.ReadByte()
-				//丢弃5个字节
-				fmt.Print(dianbiaoNum)
-				reader.Discard(4)
-				recvbytes := make([]byte,0x68)
-				reader.Read(recvbytes)
-				fmt.Printf("% X\n",recvbytes)
-				parseBytes(recvbytes)
-				fmt.Println("done1")
-				break
-			}
-
-			//将字节取出不做处理
-			recvbytes :=make([]byte,reader.Buffered())
-			reader.Read(recvbytes)
-			fmt.Printf("% X\n",recvbytes)
-			time.Sleep(1*time.Second)
-			break
-		}
-		time.Sleep(100*time.Second)
-	}
-}

@@ -37,8 +37,7 @@ var sMap3 map[byte] []byte
 读取配置文件
  */
 func ReadConfig()  Config{
-	//filePath := "C:\\Users\\qiaok\\OneDrive\\work\\stu\\src\\main\\config.json"
-	//filePath := "/root/work/go/config/config.json"
+	 //filePath := "C:\\work\\go3\\gostu\\src\\main\\config\\4conf.json"
 	filePath := "/root/work/go/readwrite/gostu/src/main/config/4conf.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
@@ -67,7 +66,7 @@ func testconn()  {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
 }
- 
+
 func insert(li *list.List)  {
 	//sq_command := "insert into tbl_power_info_v2(P_A_DIANYA,P_B_DIANYA,P_C_DIANYA,P_UAB_XIANDIANYA,P_UBC_XIANDIANYA,P_UCA_XIANDIANYA,P_A_DIANLIU,P_B_DIANLIU,P_C_DIANLIU,P_A_YGGL,P_B_YGGL,P_C_YGGL,P_HXYGGL,P_A_WGGL,P_B_WGGL,P_C_WGGL,P_HXWGGL,P_A_SZGL,P_B_SZGL,P_C_SZGL,P_HXSZGL,P_A_GLYS,P_B_GLYS,P_C_GLYS,P_HXGLYS,P_DWPL,P_BY_KwhZ,P_BY_KwhJ,P_BY_KwhF,P_BY_KwhP,P_BY_KwhG,P_BY_HKwhZ,P_BY_HKwhJ,P_BY_HKwhF,P_BY_HKwhP,P_BY_HKwhG, P_BY_KvarhZ,P_BY_KvarhJ,P_BY_KvarhF,P_BY_KvarhP,P_BY_KvarhG, P_BY_HKvarhZ,P_BY_HKvarhJ,P_BY_HKvarhF,P_BY_HKvarhP,P_BY_HKvarhG, P_SY_KwhZ,P_SY_KwhJ,P_SY_KwhF,P_SY_KwhP,P_SY_KwhG, P_SY_HKwhZ,P_SY_HKwhJ,P_SY_HKwhF,P_SY_HKwhP,P_SY_HKwhG, P_SY_KvarhZ,P_SY_KvarhJ,P_SY_KvarhF,P_SY_KvarhP,P_SY_KvarhG, P_SY_HKvarhZ,P_SY_HKvarhJ,P_SY_HKvarhF,P_SY_HKvarhP,P_SY_HKvarhG, P_SSY_KwhZ,P_SSY_KwhJ,P_SSY_KwhF,P_SSY_KwhP,P_SSY_KwhG, P_SSY_HKwhZ,P_SSY_HKwhJ,P_SSY_HKwhF,P_SSY_HKwhP,P_SSY_HKwhG, P_SSY_KvarhZ,P_SSY_KvarhJ,P_SSY_KvarhF,P_SSY_KvarhP,P_SSY_KvarhG, P_SSY_HKvarhZ,P_SSY_HKvarhJ,P_SSY_HKvarhF,P_SSY_HKvarhP,P_SSY_HKvarhG,P_TIME,P_CODE,P_ZXYGDN,P_FXYGDN,P_ZXWGDN,P_FXWGDN)values(?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?,?,?, ?,?)"
 	sqlstring := "insert into tbl_power_info_v2(P_A_DIANYA,P_B_DIANYA,P_C_DIANYA,P_UAB_XIANDIANYA,P_UBC_XIANDIANYA,P_UCA_XIANDIANYA,P_A_DIANLIU,P_B_DIANLIU,P_C_DIANLIU,P_A_YGGL,P_B_YGGL,P_C_YGGL,P_HXYGGL,P_A_WGGL,P_B_WGGL,P_C_WGGL,P_HXWGGL,P_A_SZGL,P_B_SZGL,P_C_SZGL,P_HXSZGL,P_A_GLYS,P_B_GLYS,P_C_GLYS,P_HXGLYS,P_DWPL,P_BY_KwhZ,P_BY_KwhJ,P_BY_KwhF,P_BY_KwhP,P_BY_KwhG,P_BY_HKwhZ,P_BY_HKwhJ,P_BY_HKwhF,P_BY_HKwhP,P_BY_HKwhG, P_BY_KvarhZ,P_BY_KvarhJ,P_BY_KvarhF,P_BY_KvarhP,P_BY_KvarhG, P_BY_HKvarhZ,P_BY_HKvarhJ,P_BY_HKvarhF,P_BY_HKvarhP,P_BY_HKvarhG, P_SY_KwhZ,P_SY_KwhJ,P_SY_KwhF,P_SY_KwhP,P_SY_KwhG, P_SY_HKwhZ,P_SY_HKwhJ,P_SY_HKwhF,P_SY_HKwhP,P_SY_HKwhG, P_SY_KvarhZ,P_SY_KvarhJ,P_SY_KvarhF,P_SY_KvarhP,P_SY_KvarhG, P_SY_HKvarhZ,P_SY_HKvarhJ,P_SY_HKvarhF,P_SY_HKvarhP,P_SY_HKvarhG, P_SSY_KwhZ,P_SSY_KwhJ,P_SSY_KwhF,P_SSY_KwhP,P_SSY_KwhG, P_SSY_HKwhZ,P_SSY_HKwhJ,P_SSY_HKwhF,P_SSY_HKwhP,P_SSY_HKwhG, P_SSY_KvarhZ,P_SSY_KvarhJ,P_SSY_KvarhF,P_SSY_KvarhP,P_SSY_KvarhG, P_SSY_HKvarhZ,P_SSY_HKvarhJ,P_SSY_HKvarhF,P_SSY_HKvarhP,P_SSY_HKvarhG,P_CODE,P_TIME,P_ZXYGDN,P_FXYGDN,P_ZXWGDN,P_FXWGDN)"
@@ -86,6 +85,10 @@ func insert(li *list.List)  {
 	if e!=nil{
 		fmt.Print(e)
 	}
+	//err := db.Ping()
+	//if err != nil {
+	//	panic(err.Error()) // proper error handling instead of panic in your app
+	//}
 
 	row,err2:=db.Query(sqlstring)
 	defer row.Close()
@@ -172,7 +175,7 @@ func handleWrite(conn net.Conn)  {
 					fmt.Println("write err:", e)
 					return;
 				}
-				time.Sleep(23*time.Second)
+				time.Sleep(20*time.Second)
 			}
 		}
 		time.Sleep(5*time.Second)
@@ -191,10 +194,6 @@ func handleRead(conn net.Conn)  {
 		}
 
 		if bytes.Contains(peekbytes,[]byte{0x03,0x68}){
-			if reader.Buffered()< 109{
-				time.Sleep(3*time.Second)
-				continue
-			}
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
 			//丢弃5个字节
@@ -207,22 +206,32 @@ func handleRead(conn net.Conn)  {
 			continue
 		}
 		if bytes.Contains(peekbytes,[]byte{0x03,240}){
+
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
 			//丢弃5个字节
 			fmt.Print(dianbiaoNum)
 			reader.Discard(4)
-			recvbytes := make([]byte,240)
-			reader.Read(recvbytes)
+			recvbytes := make([]byte,0,240)
+			tmp := make([]byte,240)
+			total :=0
+			for{
+				n,err := reader.Read(tmp)
+				if err!=nil{
+					break
+				}
+				recvbytes = append(recvbytes,tmp[:n]...)
+				total += n;
+				if total>=240{
+					break
+				}
+			}
+			fmt.Println("totalsize",len(recvbytes))
 			fmt.Printf("% X\n",recvbytes)
 			sMap2[dianbiaoNum] = recvbytes
 			continue
 		}
 		if bytes.Contains(peekbytes,[]byte{0x03,16}){
-			if reader.Buffered()<21{
-				time.Sleep(3*time.Second)
-				continue
-			}
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
 			//丢弃5个字节
@@ -234,7 +243,6 @@ func handleRead(conn net.Conn)  {
 			sMap3[dianbiaoNum] = recvbytes
 			//处理，将数据送入数据库
 			if HandData(dianbiaoNum){
-
 			}
 			continue
 		}
@@ -279,60 +287,4 @@ func parseBytes(bytes []byte)  *list.List{
 	}
 	return l
 }
-//将读写放到一起进行
-func handleRequest(conn net.Conn)  {
-	defer conn.Close()
-	
-	for{
-		//发送读表命令
-		a := []byte{0x12,0x03,0x00,0x38,0x00,0x34,0xc7,0x73}
-		_,err := conn.Write(a)
-		if err!=nil{
-			fmt.Println("write err:",err)
-			break;
-		}
-		time.Sleep(1*time.Second)
-		//读取数据
-		reader := bufio.NewReader(conn)
-		for{
-			peekbytes,err := reader.Peek(3)
-			fmt.Printf("% X\n",peekbytes)
-			n := reader.Buffered()
-			fmt.Println(n)
-			if err!=nil{
-				fmt.Println("err2222:",err)
-				break
-			}
 
-			if bytes.Contains(peekbytes,[]byte{0x77,0x77}){
-				//丢弃10个字节
-				recvbytes := make([]byte,10)
-				reader.Read(recvbytes)
-				fmt.Printf("% X\n",recvbytes)
-				continue
-			}
-
-			if bytes.Contains(peekbytes,[]byte{0x03,0x68}){
-				//读取 字节
-				dianbiaoNum,_ := reader.ReadByte()
-				//丢弃5个字节
-				fmt.Print(dianbiaoNum)
-				reader.Discard(4)
-				recvbytes := make([]byte,0x68)
-				reader.Read(recvbytes)
-				fmt.Printf("% X\n",recvbytes)
-				parseBytes(recvbytes)
-				fmt.Println("done1")
-				break
-			}
-
-			//将字节取出不做处理
-			recvbytes :=make([]byte,reader.Buffered())
-			reader.Read(recvbytes)
-			fmt.Printf("% X\n",recvbytes)
-			time.Sleep(1*time.Second)
-			break
-		}
-		time.Sleep(100*time.Second)
-	}
-}
