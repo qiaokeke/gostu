@@ -196,7 +196,7 @@ func handleRead(conn net.Conn)  {
 				}
 				recvbytes = append(recvbytes,tmp[:n]...)
 				total += n;
-				if total>=240{
+				if total>=0x68{
 					break
 				}
 			}
