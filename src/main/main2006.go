@@ -200,8 +200,22 @@ func handleRead(conn net.Conn)  {
 			//丢弃5个字节
 			fmt.Print(dianbiaoNum)
 			reader.Discard(4)
-			recvbytes := make([]byte,0x68)
-			reader.Read(recvbytes)
+			recvbytes := make([]byte,0,0x68)
+			tmp := make([]byte,0x68)
+			total :=0
+			for{
+				n,err := reader.Read(tmp)
+				if err!=nil{
+					break
+				}
+				recvbytes = append(recvbytes,tmp[:n]...)
+				total += n;
+				if total>=240{
+					break
+				}
+			}
+			fmt.Println("totalsize",len(recvbytes))
+
 			fmt.Printf("% X\n",recvbytes)
 			sMap1[dianbiaoNum] = recvbytes
 			continue

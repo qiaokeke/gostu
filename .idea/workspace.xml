@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2476882e-35cb-4823-b99f-845340301cb8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pkg/windows_amd64/github.com/go-sql-driver/mysql.a" afterPath="$PROJECT_DIR$/pkg/windows_amd64/github.com/go-sql-driver/mysql.a" />
       <change beforePath="$PROJECT_DIR$/src/main/main2006.go" afterPath="$PROJECT_DIR$/src/main/main2006.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +64,8 @@
       <file leaf-file-name="main2006.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/main2006.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="222" column="17" lean-forward="true" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
+            <state relative-caret-position="361">
+              <caret line="237" column="35" lean-forward="false" selection-start-line="237" selection-start-column="35" selection-end-line="237" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -725,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/main2006.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="222" column="17" lean-forward="true" selection-start-line="222" selection-start-column="17" selection-end-line="222" selection-end-column="17" />
+        <state relative-caret-position="361">
+          <caret line="237" column="35" lean-forward="false" selection-start-line="237" selection-start-column="35" selection-end-line="237" selection-end-column="35" />
           <folding />
         </state>
       </provider>
