@@ -15,8 +15,6 @@ import (
 	"encoding/json"
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
-	"errors"
-	"runtime/debug"
 )
 //配置文件
 type Config struct {
