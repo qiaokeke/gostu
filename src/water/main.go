@@ -1,22 +1,20 @@
-package main
+package water
 
 import (
-	"flag"
-	"fmt"
-	"net"
-	"os"
-	"time"
-	"bufio"
-	"bytes"
-	"encoding/binary"
-	"math"
-	"container/list"
-	"io/ioutil"
-	"encoding/json"
-	"database/sql"
-	_ "github.com/go-sql-driver/mysql"
-	"errors"
-	"runtime/debug"
+"flag"
+"fmt"
+"net"
+"os"
+"time"
+"bufio"
+"bytes"
+"encoding/binary"
+"math"
+"container/list"
+"io/ioutil"
+"encoding/json"
+"database/sql"
+_ "github.com/go-sql-driver/mysql"
 )
 //配置文件
 type Config struct {
@@ -39,7 +37,7 @@ var sMap3 map[byte] []byte
 读取配置文件
  */
 func ReadConfig()  Config{
-	 //filePath := "C:\\work\\go3\\gostu\\src\\main\\config\\4conf.json"
+	//filePath := "C:\\work\\go3\\gostu\\src\\main\\config\\4conf.json"
 	filePath := "/root/work/go/readwrite/gostu/src/main/config/2conf.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
@@ -55,6 +53,19 @@ func ReadConfig()  Config{
 	return config
 }
 
+/**
+数据库操作
+ */
+func testconn()  {
+	db, e:= sql.Open("mysql", "root:Aa651830@tcp(120.27.227.95:3306)/huzhou?charset=utf8")
+	if e!=nil{
+		fmt.Print(e)
+	}
+	err := db.Ping()
+	if err != nil {
+		panic(err.Error()) // proper error handling instead of panic in your app
+	}
+}
 
 func insert(li *list.List)  {
 	//sq_command := "insert into tbl_power_info_v2(P_A_DIANYA,P_B_DIANYA,P_C_DIANYA,P_UAB_XIANDIANYA,P_UBC_XIANDIANYA,P_UCA_XIANDIANYA,P_A_DIANLIU,P_B_DIANLIU,P_C_DIANLIU,P_A_YGGL,P_B_YGGL,P_C_YGGL,P_HXYGGL,P_A_WGGL,P_B_WGGL,P_C_WGGL,P_HXWGGL,P_A_SZGL,P_B_SZGL,P_C_SZGL,P_HXSZGL,P_A_GLYS,P_B_GLYS,P_C_GLYS,P_HXGLYS,P_DWPL,P_BY_KwhZ,P_BY_KwhJ,P_BY_KwhF,P_BY_KwhP,P_BY_KwhG,P_BY_HKwhZ,P_BY_HKwhJ,P_BY_HKwhF,P_BY_HKwhP,P_BY_HKwhG, P_BY_KvarhZ,P_BY_KvarhJ,P_BY_KvarhF,P_BY_KvarhP,P_BY_KvarhG, P_BY_HKvarhZ,P_BY_HKvarhJ,P_BY_HKvarhF,P_BY_HKvarhP,P_BY_HKvarhG, P_SY_KwhZ,P_SY_KwhJ,P_SY_KwhF,P_SY_KwhP,P_SY_KwhG, P_SY_HKwhZ,P_SY_HKwhJ,P_SY_HKwhF,P_SY_HKwhP,P_SY_HKwhG, P_SY_KvarhZ,P_SY_KvarhJ,P_SY_KvarhF,P_SY_KvarhP,P_SY_KvarhG, P_SY_HKvarhZ,P_SY_HKvarhJ,P_SY_HKvarhF,P_SY_HKvarhP,P_SY_HKvarhG, P_SSY_KwhZ,P_SSY_KwhJ,P_SSY_KwhF,P_SSY_KwhP,P_SSY_KwhG, P_SSY_HKwhZ,P_SSY_HKwhJ,P_SSY_HKwhF,P_SSY_HKwhP,P_SSY_HKwhG, P_SSY_KvarhZ,P_SSY_KvarhJ,P_SSY_KvarhF,P_SSY_KvarhP,P_SSY_KvarhG, P_SSY_HKvarhZ,P_SSY_HKvarhJ,P_SSY_HKvarhF,P_SSY_HKvarhP,P_SSY_HKvarhG,P_TIME,P_CODE,P_ZXYGDN,P_FXYGDN,P_ZXWGDN,P_FXWGDN)values(?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?, ?,?, ?, ?,?, ?,?,?, ?,?,?,?, ?,?)"
@@ -123,20 +134,7 @@ func main()  {
 }
 
 //整理数据，将数据放入数据库
-func HandData(num byte)  (err error){
-	defer func() {
-		if p := recover(); p != nil {
-			fmt.Println("panic recover! p:", p)
-			str, ok := p.(string)
-			if ok {
-				err = errors.New(str)
-			} else {
-				err = errors.New("panic")
-			}
-			debug.PrintStack()
-		}
-	}()
-
+func HandData(num byte)  bool{
 	value1,ok1 :=sMap1[num]
 	value2,ok2 :=sMap2[num]
 	value3,ok3 :=sMap3[num]
@@ -159,8 +157,9 @@ func HandData(num byte)  (err error){
 		delete(sMap2,num)
 		delete(sMap3,num)
 		fmt.Println("读取完毕一个")
-
+		return true
 	}
+	return false
 }
 
 
@@ -243,9 +242,7 @@ func handleRead(conn net.Conn)  {
 			fmt.Printf("% X\n",recvbytes)
 			sMap3[dianbiaoNum] = recvbytes
 			//处理，将数据送入数据库
-			err :=HandData(dianbiaoNum)
-			if err!=nil{
-				fmt.Print(err)
+			if HandData(dianbiaoNum){
 			}
 			continue
 		}
