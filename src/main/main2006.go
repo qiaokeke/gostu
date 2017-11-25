@@ -82,7 +82,7 @@ func insert(li *list.List)  {
 	row,err2:=db.Query(sqlstring)
 	defer row.Close()
 	if err2!=nil{
-		panic(err2)
+		fmt.Println(err2)
 	}
 	fmt.Print("写入成功")
 }
@@ -123,19 +123,7 @@ func main()  {
 }
 
 //整理数据，将数据放入数据库
-func HandData(num byte)  (err error){
-	defer func() {
-		if p := recover(); p != nil {
-			fmt.Println("panic recover! p:", p)
-			str, ok := p.(string)
-			if ok {
-				err = errors.New(str)
-			} else {
-				err = errors.New("panic")
-			}
-			debug.PrintStack()
-		}
-	}()
+func HandData(num byte) {
 
 	value1,ok1 :=sMap1[num]
 	value2,ok2 :=sMap2[num]
@@ -257,7 +245,7 @@ func handleRead(conn net.Conn)  {
 			fmt.Printf("% X\n",recvbytes)
 			sMap3[dianbiaoNum] = recvbytes
 			//处理，将数据送入数据库
-			err :=HandData(dianbiaoNum)
+			HandData(dianbiaoNum)
 			if err!=nil{
 				fmt.Print(err)
 			}

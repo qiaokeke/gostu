@@ -90,7 +90,7 @@ func insert(li *list.List)  {
 	row,err2:=db.Query(sqlstring)
 	defer row.Close()
 	if err2!=nil{
-		panic(err2)
+		fmt.Println(err2)
 	}
 	fmt.Print("写入成功")
 }
