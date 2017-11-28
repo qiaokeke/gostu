@@ -12,7 +12,6 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"strconv"
-	"strings"
 )
 //配置文件
 type Config struct {
@@ -25,7 +24,7 @@ type Config struct {
  */
 func ReadConfig()  Config{
 	//filePath := "C:\\work\\go\\gostu\\src\\main\\config\\conf6011.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6019.json"
+	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6018.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
@@ -116,7 +115,7 @@ func ParseWaterId(bytes []byte)  string{
 	str := ""
 	for i:=5;i>=0;i--{
 		hexs := strconv.FormatInt(int64((bytes[i])&0xff),16)
-		if strings.EqualFold(hexs,"0"){
+		if hexs=="0"{
 			hexs="00"
 		}
 		str += hexs

@@ -49,8 +49,18 @@
       <file leaf-file-name="water6019.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/water6019.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+            <state relative-caret-position="513">
+              <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="water6018.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/water6018.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19">
+              <caret line="26" column="71" lean-forward="false" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -118,6 +128,8 @@
         <option value="$PROJECT_DIR$/src/main/config/conf6011.json" />
         <option value="$PROJECT_DIR$/src/main/config/conf6019.json" />
         <option value="$PROJECT_DIR$/src/main/water6011.go" />
+        <option value="$PROJECT_DIR$/src/main/water6020.go" />
+        <option value="$PROJECT_DIR$/src/main/water6018.go" />
         <option value="$PROJECT_DIR$/src/main/water6019.go" />
       </list>
     </option>
@@ -210,8 +222,8 @@
       <recent name="C:\work\go\stu\" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\work\go\gostu\src\main\config" />
       <recent name="C:\work\go\gostu\src\main" />
+      <recent name="C:\work\go\gostu\src\main\config" />
       <recent name="C:\work\go\stu\main" />
     </key>
   </component>
@@ -362,14 +374,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/main_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -733,10 +737,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/water6018.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="26" column="71" lean-forward="false" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/water6019.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+        <state relative-caret-position="513">
+          <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
           <folding />
         </state>
       </provider>
