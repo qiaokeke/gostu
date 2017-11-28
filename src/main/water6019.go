@@ -83,7 +83,7 @@ func ParseWaterData(bytes []byte)  float64{
 	r :=0.0
 	for j:=0;j<4;j++ {
 		hexs := strconv.FormatInt(int64((bytes[j]-0x33)&0xff),16)
-		fmt.Println(hexs)
+		//fmt.Println(hexs)
 		i, err := strconv.Atoi(hexs)
 		if err != nil {
 			fmt.Println(err)
@@ -114,8 +114,10 @@ func ParseWaterData(bytes []byte)  float64{
 func ParseWaterId(bytes []byte)  string{
 	str := ""
 	for i:=5;i>=0;i--{
-
 		hexs := strconv.FormatInt(int64((bytes[i])&0xff),16)
+		if hexs=="0"{
+			hexs="00"
+		}
 		str += hexs
 	}
 	fmt.Println(str)
@@ -127,7 +129,6 @@ var port = flag.String("port","6100","port")
 
 func main()  {
 	ParseWaterData([]byte{0x33,0x3A,0x34,0x33})
-
 	port := ReadConfig().Port
 	var l net.Listener
 	var err error

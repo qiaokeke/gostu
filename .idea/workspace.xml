@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2476882e-35cb-4823-b99f-845340301cb8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/config/conf6019.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/water6019.go" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/22conf.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/29conf.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/4006-1123-15.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/4006-1123-16.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/4006-1123.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/4006112321.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/5006-1123-15.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/5006-1123-16.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/5006112321.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/config.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/config6014.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/main22.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/main26.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/main29.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/main315.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/main56.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/main599.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/test.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/water6011.go" afterPath="$PROJECT_DIR$/src/main/water6011.go" />
+      <change beforePath="$PROJECT_DIR$/src/main/water6019.go" afterPath="$PROJECT_DIR$/src/main/water6019.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,8 +49,8 @@
       <file leaf-file-name="water6019.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/water6019.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            <state relative-caret-position="437">
+              <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -331,8 +309,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="439" y="95" width="1374" height="849" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2437408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2437408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -756,8 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/water6019.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="437">
+          <caret line="119" column="9" lean-forward="true" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
           <folding />
         </state>
       </provider>
