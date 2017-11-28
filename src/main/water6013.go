@@ -24,7 +24,7 @@ type Config struct {
  */
 func ReadConfig()  Config{
 	//filePath := "C:\\work\\go\\gostu\\src\\main\\config\\conf6011.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6011.json"
+	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6013.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
