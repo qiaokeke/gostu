@@ -115,8 +115,8 @@ func ParseWaterId(bytes []byte)  string{
 	str := ""
 	for i:=5;i>=0;i--{
 		hexs := strconv.FormatInt(int64((bytes[i])&0xff),16)
-		if hexs=="0"{
-			hexs="00"
+		if len(hexs)==1{
+			str+="0"
 		}
 		str += hexs
 	}
@@ -183,41 +183,41 @@ func handleWrite(conn net.Conn)  {
 func handleRead(conn net.Conn)  {
 	defer conn.Close()
 	for{
-			recvBytes := make([]byte,0,100)
-			tmp := make([]byte,100)
-			n,err := conn.Read(tmp)
-			if err!=nil{
-				fmt.Println(err)
-				break
-			}
-			if n<=0{
-				continue
-			}
-			fmt.Printf("% X\n",tmp[0:n])
+		recvBytes := make([]byte,0,100)
+		tmp := make([]byte,100)
+		n,err := conn.Read(tmp)
+		if err!=nil{
+			fmt.Println(err)
+			break
+		}
+		if n<=0{
+			continue
+		}
+		fmt.Printf("% X\n",tmp[0:n])
 
-			if bytes.HasPrefix(tmp,[]byte{0x68}){
-				recvBytes = append(recvBytes,tmp[:n]...)
-				if n < 18{
-					for{
-						i,err := conn.Read(tmp)
-						if err!=nil{
-							fmt.Println(err)
-							break
-						}
-						if i<=0{
-							continue
-						}
-						fmt.Printf("% X\n",tmp[0:i])
-						recvBytes = append(recvBytes,tmp[:i]...)
-						n +=i
-						if n>=18{
-							break
-						}
+		if bytes.HasPrefix(tmp,[]byte{0x68}){
+			recvBytes = append(recvBytes,tmp[:n]...)
+			if n < 18{
+				for{
+					i,err := conn.Read(tmp)
+					if err!=nil{
+						fmt.Println(err)
+						break
+					}
+					if i<=0{
+						continue
+					}
+					fmt.Printf("% X\n",tmp[0:i])
+					recvBytes = append(recvBytes,tmp[:i]...)
+					n +=i
+					if n>=18{
+						break
 					}
 				}
-				fmt.Printf("% X\n",recvBytes)
-				go HandData(recvBytes)
 			}
+			fmt.Printf("% X\n",recvBytes)
+			go HandData(recvBytes)
+		}
 	}
 }
 

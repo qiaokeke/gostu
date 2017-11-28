@@ -116,7 +116,7 @@ func ParseWaterId(bytes []byte)  string{
 	for i:=5;i>=0;i--{
 		hexs := strconv.FormatInt(int64((bytes[i])&0xff),16)
 		if len(hexs)==1{
-			hexs+="0"
+			str+="0"
 		}
 		str += hexs
 	}
