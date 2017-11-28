@@ -12,7 +12,6 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"strconv"
-	"strings"
 )
 //配置文件
 type Config struct {
