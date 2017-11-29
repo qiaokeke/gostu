@@ -159,6 +159,12 @@ func HandData(bytes []byte) {
 	data := ParseWaterData(recvBytes[12:16])
 	id := ParseWaterId(recvBytes[1:7])
 	insert(id,fmt.Sprintf("%.2f",data),time.Now().Format("20060102150405"))
+	defer func() {
+		if x := recover();x!=nil{
+			fmt.Println("inset,err,flag")
+			return
+		}
+	}()
 }
 
 func handleWrite(conn net.Conn)  {

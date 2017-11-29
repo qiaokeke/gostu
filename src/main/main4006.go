@@ -136,6 +136,12 @@ func HandData(num byte)  bool{
 		}
 		//写入数据库
 		insert(l1)
+		defer func() {
+			if x := recover();x!=nil{
+				fmt.Println("inset,err,flag")
+				return
+			}
+		}()
 		//fmt.Print(l1)
 		//删除键值
 		delete(sMap1,num)
