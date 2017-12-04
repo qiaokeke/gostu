@@ -81,6 +81,10 @@ func insert(li *list.List)  {
 	if err2!=nil{
 		fmt.Println(err2)
 	}
+	err3 := row.Err()
+	if err3!=nil{
+		fmt.Printf(err3.Error())
+	}
 	fmt.Print("写入成功")
 }
 
