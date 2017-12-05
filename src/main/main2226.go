@@ -191,6 +191,9 @@ func handleRead(conn net.Conn)  {
 		if bytes.Contains(peekbytes,[]byte{0x03,0x68}){
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
+			if dianbiaoNum==1{
+				dianbiaoNum=29
+			}
 			//丢弃5个字节
 			fmt.Print(dianbiaoNum)
 			reader.Discard(4)
@@ -203,7 +206,10 @@ func handleRead(conn net.Conn)  {
 		if bytes.Contains(peekbytes,[]byte{0x03,240}){
 
 			//读取 字节
-			dianbiaoNum,_ := reader.ReadByte()
+			dianbiaoNum,_:= reader.ReadByte()
+			if dianbiaoNum==1{
+				dianbiaoNum=29
+			}
 			//丢弃5个字节
 			fmt.Print(dianbiaoNum)
 			reader.Discard(4)
@@ -229,6 +235,9 @@ func handleRead(conn net.Conn)  {
 		if bytes.Contains(peekbytes,[]byte{0x03,16}){
 			//读取 字节
 			dianbiaoNum,_ := reader.ReadByte()
+			if dianbiaoNum==1{
+				dianbiaoNum=29
+			}
 			//丢弃5个字节
 			fmt.Print(dianbiaoNum)
 			reader.Discard(4)

@@ -38,7 +38,7 @@ var sMap3 map[byte] []byte
  */
 func ReadConfig()  Config{
 	 //filePath := "C:\\work\\go3\\gostu\\src\\main\\config\\4conf.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/229conf.json"
+	filePath := "/root/work/go/readwrite/gostu/src/main/config/15conf.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
@@ -80,6 +80,10 @@ func insert(li *list.List)  {
 	defer row.Close()
 	if err2!=nil{
 		fmt.Println(err2)
+	}
+	err3 := row.Err()
+	if err3!=nil{
+		fmt.Printf(err3.Error())
 	}
 	fmt.Print("写入成功")
 }
@@ -136,6 +140,12 @@ func HandData(num byte)  bool{
 		}
 		//写入数据库
 		insert(l1)
+		defer func() {
+			if x := recover();x!=nil{
+				fmt.Println("inset,err,flag")
+				return
+			}
+		}()
 		//fmt.Print(l1)
 		//删除键值
 		delete(sMap1,num)
