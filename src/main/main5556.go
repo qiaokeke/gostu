@@ -38,7 +38,7 @@ var sMap3 map[byte] []byte
  */
 func ReadConfig()  Config{
 	 //filePath := "C:\\work\\go3\\gostu\\src\\main\\config\\4conf.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/5conf.json"
+	filePath := "/root/work/go/readwrite/gostu/src/main/config/15conf.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
