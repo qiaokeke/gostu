@@ -20,7 +20,7 @@ type Config struct {
 }
 
 /**
-读取配置文件
+	读取配置文件
  */
 func ReadConfig()  Config{
 	//filePath := "C:\\work\\go\\gostu\\src\\main\\config\\conf6011.json"
