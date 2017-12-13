@@ -24,7 +24,7 @@ type Config struct {
  */
 func ReadConfig()  Config{
 	//filePath := "C:\\work\\go\\gostu\\src\\main\\config\\conf6011.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6015.json"
+	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6031.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
@@ -59,6 +59,10 @@ func insert(W_ADDRESS string,W_READINGS string,W_TIME string)  {
 	defer row.Close()
 	if err2!=nil{
 		fmt.Println(err2)
+	}
+	err3 := row.Err()
+	if err3!=nil{
+		fmt.Printf(err3.Error())
 	}
 	fmt.Print("写入成功")
 }
@@ -155,10 +159,10 @@ func main()  {
 
 //整理数据，将数据放入数据库
 func HandData(bytes []byte) {
-	recvBytes:=bytes[0:18]
-	data := ParseWaterData(recvBytes[12:16])
-	id := ParseWaterId(recvBytes[1:7])
-	insert(id,fmt.Sprintf("%.2f",data),time.Now().Format("20060102150405"))
+//	recvBytes:=bytes[0:18]
+//	data := ParseWaterData(recvBytes[12:16])
+//	id := ParseWaterId(recvBytes[1:7])
+//	insert(id,fmt.Sprintf("%.2f",data),time.Now().Format("20060102150405"))
 	defer func() {
 		if x := recover();x!=nil{
 			fmt.Println("inset,err,flag")

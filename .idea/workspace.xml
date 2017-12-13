@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2476882e-35cb-4823-b99f-845340301cb8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/main4006.go" afterPath="$PROJECT_DIR$/src/main/main4006.go" />
+      <change beforePath="$PROJECT_DIR$/src/main/xiuzhou6030.go" afterPath="$PROJECT_DIR$/src/main/xiuzhou6030.go" />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,6 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="water6017.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/water6017.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,6 +46,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2926">
               <caret line="166" column="7" lean-forward="false" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
+=======
+      <file leaf-file-name="xiuzhou6030.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/xiuzhou6030.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1045">
+              <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
               <folding>
                 <element signature="e#14#162#0" expanded="true" />
               </folding>
@@ -47,6 +60,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="main2226.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/main2226.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,12 +104,16 @@
         </entry>
       </file>
       <file leaf-file-name="main4006.go" pinned="false" current-in-tab="false">
+=======
+      <file leaf-file-name="main4006.go" pinned="false" current-in-tab="true">
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
         <entry file="file://$PROJECT_DIR$/src/main/main4006.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1596">
-              <caret line="147" column="11" lean-forward="false" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
+            <state relative-caret-position="209">
+              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
               <folding>
                 <element signature="n#!!block;n#ReadConfig#0" expanded="false" />
+<<<<<<< HEAD
                 <element signature="n#!!block;n#insert#0" expanded="false" />
               </folding>
             </state>
@@ -109,6 +127,8 @@
               <caret line="136" column="27" lean-forward="false" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
               <folding>
                 <marker date="1512652916518" expanded="true" signature="4311:4315" ph="{...}" />
+=======
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
               </folding>
             </state>
           </provider>
@@ -182,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/main/water6017.go" />
         <option value="$PROJECT_DIR$/src/main/water6018.go" />
         <option value="$PROJECT_DIR$/src/main/water6019.go" />
-        <option value="$PROJECT_DIR$/src/main/main4006.go" />
         <option value="$PROJECT_DIR$/src/main/main5556.go" />
         <option value="$PROJECT_DIR$/src/main/water6011.go" />
         <option value="$PROJECT_DIR$/src/main/water6012.go" />
@@ -197,7 +216,12 @@
         <option value="$PROJECT_DIR$/src/main/xiuzhou6051.go" />
         <option value="$PROJECT_DIR$/src/main/config/conf6051.json" />
         <option value="$PROJECT_DIR$/src/main/main2226.go" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/main6015.go" />
+=======
+        <option value="$PROJECT_DIR$/src/main/xiuzhou6030.go" />
+        <option value="$PROJECT_DIR$/src/main/main4006.go" />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
       </list>
     </option>
   </component>
@@ -208,10 +232,15 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="357" />
     <option name="y" value="186" />
+=======
+    <option name="x" value="34" />
+    <option name="y" value="290" />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
     <option name="width" value="1262" />
-    <option name="height" value="695" />
+    <option name="height" value="682" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -375,7 +404,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="357" y="186" width="1262" height="695" extended-state="0" />
+=======
+    <frame x="34" y="290" width="1262" height="682" extended-state="0" />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26645264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -523,14 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/water6015.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3154">
-          <caret line="166" column="7" lean-forward="false" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/water6016.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2926">
@@ -562,7 +587,7 @@
         <state relative-caret-position="2926">
           <caret line="166" column="7" lean-forward="false" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
           <folding>
-            <element signature="e#14#162#0" expanded="true" />
+            <element signature="e#14#162#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -574,6 +599,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/main4006.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1596">
@@ -582,6 +608,13 @@
             <element signature="n#!!block;n#ReadConfig#0" expanded="false" />
             <element signature="n#!!block;n#insert#0" expanded="false" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/main5556.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="136" column="27" lean-forward="false" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
+          <folding />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
         </state>
       </provider>
     </entry>
@@ -652,6 +685,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -665,10 +699,22 @@
     <entry file="file://$PROJECT_DIR$/src/main/config/5conf.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="5" selection-end-column="28" />
+          <caret line="5" column="28" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="5" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/main3336.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="177" column="1" lean-forward="false" selection-start-line="177" selection-start-column="1" selection-end-line="177" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
     <entry file="file://$PROJECT_DIR$/src/main/water6011.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -679,31 +725,44 @@
     <entry file="file://$PROJECT_DIR$/src/main/config/conf6011.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/water6012.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
+<<<<<<< HEAD
           <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+=======
+          <caret line="21" column="3" lean-forward="false" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/xiuzhou6051.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
+<<<<<<< HEAD
           <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+=======
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/config/conf6051.json">
+    <entry file="file://$PROJECT_DIR$/src/main/main2226.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="109" column="17" lean-forward="false" selection-start-line="109" selection-start-column="17" selection-end-line="109" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/water6013.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1558">
@@ -752,7 +811,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
           <caret line="168" column="8" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/water6015.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="166" column="7" lean-forward="false" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
+>>>>>>> 80b6bde82d21632e8149661a07dcf7ea649b13bb
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/config/conf6051.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/xiuzhou6030.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/main4006.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!block;n#ReadConfig#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

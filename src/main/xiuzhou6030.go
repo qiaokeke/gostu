@@ -20,11 +20,11 @@ type Config struct {
 }
 
 /**
-读取配置文件
+	读取配置文件
  */
 func ReadConfig()  Config{
 	//filePath := "C:\\work\\go\\gostu\\src\\main\\config\\conf6011.json"
-	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6051.json"
+	filePath := "/root/work/go/readwrite/gostu/src/main/config/conf6030.json"
 	file,err := ioutil.ReadFile(filePath)
 	if err!=nil{
 		fmt.Println("config file err:",err)
@@ -159,10 +159,10 @@ func main()  {
 
 //整理数据，将数据放入数据库
 func HandData(bytes []byte) {
-	recvBytes:=bytes[0:18]
-	data := ParseWaterData(recvBytes[12:16])
-	id := ParseWaterId(recvBytes[1:7])
-	insert(id,fmt.Sprintf("%.2f",data),time.Now().Format("20060102150405"))
+//	recvBytes:=bytes[0:18]
+//	data := ParseWaterData(recvBytes[12:16])
+//	id := ParseWaterId(recvBytes[1:7])
+//	insert(id,fmt.Sprintf("%.2f",data),time.Now().Format("20060102150405"))
 	defer func() {
 		if x := recover();x!=nil{
 			fmt.Println("inset,err,flag")
